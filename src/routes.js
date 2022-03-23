@@ -20,6 +20,9 @@ import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
 import TableList from "views/Tables.js";
 import UserPage from "views/User.js";
+import ClientTables from "views/clients";
+import OrderTables from "views/orders";
+
 var routes = [
   {
     path: "/dashboard",
@@ -28,13 +31,7 @@ var routes = [
     component: Dashboard,
     layout: "/admin",
   },
-  {
-    path: "/icons",
-    name: "الطلبيات",
-    icon: "nc-icon nc-diamond",
-    component: Icons,
-    layout: "/admin",
-  },
+
   
   {
     path: "/user-page",
@@ -48,6 +45,20 @@ var routes = [
     name: "قطع الغيار",
     icon: "nc-icon nc-tile-56",
     component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/clients",
+    name: "العملاء",
+    icon: "nc-icon nc-bank",
+    component: ClientTables,
+    layout: "/admin",
+  },
+  {
+    path: "/Orders",
+    name: "الطلبيات",
+    icon: "nc-icon nc-bank",
+    component: OrderTables,
     layout: "/admin",
   },
 

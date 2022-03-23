@@ -34,7 +34,7 @@ import {
   
 } from "reactstrap";
 
-function Tables() {
+function OrderTables() {
   return (
     <>
       <div className="content">
@@ -64,7 +64,7 @@ function Tables() {
               <Table stripped bordered hover variant="dark" className="text-center">
                   <thead className="text-primary"  >
                     <tr> 
-                      <th><h5>مدة التركيب</h5></th>
+                      <th><h5> الحالة</h5></th>
                       <th><h5> مدة التأمين</h5> </th>
                        <th><h5>الجودة</h5></th>
                        <th><h5>السعر</h5></th>
@@ -208,4 +208,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default OrderTables;

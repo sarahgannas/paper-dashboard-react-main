@@ -34,7 +34,7 @@ import {
   
 } from "reactstrap";
 
-function Tables() {
+function ClientTables() {
   return (
     <>
       <div className="content">
@@ -46,7 +46,6 @@ function Tables() {
                  <Col>
                 <Button color="success">ADD</Button>
                 <Button color="danger">DELETE</Button>
-                <Button color="warning">EDIT</Button> 
                  </Col>
                  <Col>
                  <Form inline className="ml-auto">
@@ -64,40 +63,56 @@ function Tables() {
               <Table stripped bordered hover variant="dark" className="text-center">
                   <thead className="text-primary"  >
                     <tr> 
-                      <th><h5>مدة التركيب</h5></th>
-                      <th><h5> مدة التأمين</h5> </th>
-                       <th><h5>الجودة</h5></th>
-                       <th><h5>السعر</h5></th>
-                      <th><h5>الاسم</h5></th>
-                    
+                       <th></th>
+                      <th><h5>تصنيف العميل</h5></th>
+                      <th><h5> الخدمات السابقة </h5> </th>
+                       <th><h5>موعد التسليم</h5></th>
+                       <th><h5>الخدمة</h5></th>
+                      <th><h5>اسم العميل</h5></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                   
-                      <td>  3 ايام </td>
-                      <td>شهر</td>
+                      <td><Button color="warning"  className="text-left">EDIT</Button> 
+                      </td>
+                      <td>
+                      <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <div><i className="nc-icon nc-diamond" /> </div>
+                      <div>VIP</div>
+                      </div>
+                      </td>
+                      <td>تركيب شاشة</td>
                       <td>اصلية</td>
                       <td>500</td>
                       <td>S10 شاشة  </td>
                       
                     </tr>
                     <tr> 
-                      <td>  10 ايام </td>
+                      <td><Button color="warning">EDIT</Button></td>
+                      <td>
+                      <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <div><i className="nc-icon nc-satisfied" /> </div>
+                      <div>Good</div>
+                      </div>
+                      </td>
                       <td>شهر</td>
                       <td>درجة أولى</td>
                       <td>200</td>
                       <td>S10 شاشة  </td>
-                   
                     </tr>
                     <tr>
-                      <td> اسبوعين </td>
+                    <td><Button color="warning">EDIT</Button>
+                    {/* <i className="nc-icon nc-check-2" />  */}
+                    </td>
+                      <td>New 
+                      </td>
                       <td>شهر</td>
                       <td>درجة أولى</td>
                       <td>300</td>
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr>
+                      <td><Button color="warning">EDIT</Button></td>
                       <td> اسبوع </td>
                       <td> أشهر 3</td>
                       <td>اصلية</td>
@@ -106,6 +121,7 @@ function Tables() {
                       
                     </tr>
                     <tr>
+                      <td><Button color="warning">EDIT</Button></td>
                       <td> اسبوعين  </td>
                       <td>شهرين</td>
                       <td>اصلية</td>
@@ -113,6 +129,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr>
+                    <td><Button color="warning">EDIT</Button></td>
                     <td>  3 ايام </td>
                       <td>شهر</td>
                       <td>درجةأولى </td>
@@ -120,6 +137,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr>
+                      <td><Button color="warning">EDIT</Button></td>
                       <td>  3 ايام </td>
                       <td>شهر</td>
                       <td>اصلية</td>
@@ -127,6 +145,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr>
+                    <td><Button color="warning">EDIT</Button></td>
                     <td> اسبوع </td>
                       <td> أشهر 3</td>
                       <td>اصلية</td>
@@ -134,6 +153,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr>
+                    <td><Button color="warning">EDIT</Button></td>
                     <td> اسبوع </td>
                       <td> أشهر 3</td>
                       <td>اصلية</td>
@@ -141,6 +161,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr> 
+                      <td><Button color="warning">EDIT</Button></td>
                       <td> اسبوع </td>
                       <td> أشهر 3</td>
                       <td>اصلية</td>
@@ -148,6 +169,7 @@ function Tables() {
                       <td>S10 شاشة  </td>
                     </tr>
                     <tr> 
+                      <td><Button color="warning">EDIT</Button></td>
                       <td> اسبوع </td>
                       <td> أشهر 3</td>
                       <td>اصلية</td>
@@ -160,6 +182,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     <tr>
                     <td> اسبوع </td>
@@ -167,6 +190,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     <tr>
                     <td> اسبوع </td>
@@ -174,6 +198,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     <tr>
                     <td> اسبوع </td>
@@ -181,6 +206,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     <tr>
                     <td> اسبوع </td>
@@ -188,6 +214,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     <tr>
                     <td> اسبوع </td>
@@ -195,6 +222,7 @@ function Tables() {
                       <td>اصلية</td>
                       <td>600</td>
                       <td>S10 شاشة  </td>
+                      <td><Button color="warning">EDIT</Button></td>
                     </tr>
                     
                   </tbody>
@@ -208,4 +236,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default ClientTables;

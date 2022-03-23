@@ -52,8 +52,8 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Capacity</p>
-                      <CardTitle tag="p">150GB</CardTitle>
+                      <p className="card-category">In Progress</p>
+                      <CardTitle tag="p">50</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -62,7 +62,7 @@ function Dashboard() {
               <CardFooter>
                 <hr />
                 <div className="stats">
-                  <i className="fas fa-sync-alt" /> Update Now
+                  <i className="fas fa-sync-alt" /> Due Today
                 </div>
               </CardFooter>
             </Card>
@@ -78,8 +78,8 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
-                      <CardTitle tag="p">$ 1,345</CardTitle>
+                      <p className="card-category">Complete Orders</p>
+                      <CardTitle tag="p">20</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -88,7 +88,7 @@ function Dashboard() {
               <CardFooter>
                 <hr />
                 <div className="stats">
-                  <i className="far fa-calendar" /> Last day
+                  <i className="far fa-calendar" /> Added Today
                 </div>
               </CardFooter>
             </Card>
@@ -104,8 +104,8 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
-                      <CardTitle tag="p">23</CardTitle>
+                      <p className="card-category">Failed to Repair</p>
+                      <CardTitle tag="p">25</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -114,7 +114,7 @@ function Dashboard() {
               <CardFooter>
                 <hr />
                 <div className="stats">
-                  <i className="far fa-clock" /> In the last hour
+                  <i className="far fa-clock" /> Clients didn't recieve yet
                 </div>
               </CardFooter>
             </Card>
@@ -130,8 +130,8 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
-                      <CardTitle tag="p">+45K</CardTitle>
+                      <p className="card-category">Clients</p>
+                      <CardTitle tag="p">5</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -140,7 +140,7 @@ function Dashboard() {
               <CardFooter>
                 <hr />
                 <div className="stats">
-                  <i className="fas fa-sync-alt" /> Update now
+                  <i className="fas fa-sync-alt" /> Added Today
                 </div>
               </CardFooter>
             </Card>
@@ -172,7 +172,7 @@ function Dashboard() {
         </Row>
         <Row>
           <Col md="4">
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle tag="h5">Email Statistics</CardTitle>
                 <p className="card-category">Last Campaign Performance</p>
@@ -195,9 +195,9 @@ function Dashboard() {
                   <i className="fa fa-calendar" /> Number of emails sent
                 </div>
               </CardFooter>
-            </Card>
+            </Card> */}
           </Col>
-          <Col md="8">
+          {/* <Col md="8">
             <Card className="card-chart">
               <CardHeader>
                 <CardTitle tag="h5">NASDAQ: AAPL</CardTitle>
@@ -222,7 +222,7 @@ function Dashboard() {
                 </div>
               </CardFooter>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </>
