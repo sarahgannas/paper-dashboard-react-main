@@ -67,7 +67,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">In Progress</p>
+                      <p className="card-category">قيد التجهيز</p>
                       <CardTitle tag="p">50</CardTitle>
                       <p />
                     </div>
@@ -76,9 +76,9 @@ function Dashboard() {
               </CardBody>
               <CardFooter>
                 <hr />
-                <div className="stats">
-                  <i className="fas fa-sync-alt" /> Due Today
-                </div>
+                {/* <div className="stats">
+                  <i className="fas fa-sync-alt" /> تسليم اليوم
+                </div> */}
               </CardFooter>
             </Card>
           </Col>
@@ -94,7 +94,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Complete Orders</p>
+                      <p className="card-category">الطلبيات الجاهزة</p>
                       <CardTitle tag="p">20</CardTitle>
                       <p />
                     </div>
@@ -103,9 +103,9 @@ function Dashboard() {
               </CardBody>
               <CardFooter>
                 <hr />
-                <div className="stats">
+                {/* <div className="stats">
                   <i className="far fa-calendar" /> Added Today
-                </div>
+                </div> */}
               </CardFooter>
             </Card>
           </Col>
@@ -121,7 +121,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Failed to Repair</p>
+                      <p className="card-category">لا يمكن تصليحه </p>
                       <CardTitle tag="p">25</CardTitle>
                       <p />
                     </div>
@@ -130,9 +130,9 @@ function Dashboard() {
               </CardBody>
               <CardFooter>
                 <hr />
-                <div className="stats">
+                {/* <div className="stats">
                   <i className="far fa-clock" /> Clients didn't recieve yet
-                </div>
+                </div> */}
               </CardFooter>
             </Card>
           </Col>
@@ -148,7 +148,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Clients</p>
+                      <p className="card-category">العملاء الجدد</p>
                       <CardTitle tag="p">5</CardTitle>
                       <p />
                     </div>
@@ -157,9 +157,9 @@ function Dashboard() {
               </CardBody>
               <CardFooter>
                 <hr />
-                <div className="stats">
+                {/* <div className="stats">
                   <i className="fas fa-sync-alt" /> Added Today
-                </div>
+                </div> */}
               </CardFooter>
             </Card>
           </Col>
@@ -171,13 +171,13 @@ function Dashboard() {
         <Col lg="5" md="6" sm="6">
             <Card className="card-stats">
             <CardHeader>
-                <CardTitle tag="h5">Check User</CardTitle>
+                <CardTitle tag="h5">التحقق من العميل</CardTitle>
               </CardHeader>
               <CardBody>
                 <Row>
                 <Col md="6" xs="5">
                   <FormGroup>
-                        <label>Client Number</label>
+                        <label>رقم التليفون</label>
                         <Input
                           type="text"
                         />
@@ -187,7 +187,7 @@ function Dashboard() {
                         color="primary"
                         type="submit"
                       >
-                        Submit
+                       التحقق
                       </Button>
                   </Col>
                 </Row>
@@ -196,7 +196,7 @@ function Dashboard() {
                   <FormGroup>
                         <Input
                           type="text"
-                          placeholder="Name"
+                          placeholder="الإسم"
                           disabled
                         />
                       </FormGroup>
@@ -205,7 +205,7 @@ function Dashboard() {
                   <FormGroup>
                         <Input
                           type="text"
-                          placeholder="Device"
+                          placeholder="الجهاز"
                           disabled
                         />
                       </FormGroup>
@@ -214,14 +214,14 @@ function Dashboard() {
                   <FormGroup>
                         <Input
                           type="text"
-                          placeholder="Status"
+                          placeholder="الحالة"
                           disabled
                         />
                       </FormGroup>
                   </Col>
                   <Col md="4" xs="7">
                   <FormGroup>
-                        <label>Deadline</label>
+                        <label>موعد التسليم</label>
                   <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                       </FormGroup>
                   </Col>
@@ -233,7 +233,7 @@ function Dashboard() {
                   <FormGroup>
                         <Input
                           type="textarea"
-                          placeholder="Details..."
+                          placeholder="ملاحظات إضافية..."
                           disabled
                         />
                       </FormGroup>
@@ -247,13 +247,13 @@ function Dashboard() {
         <Col lg="5" md="6" sm="6">
             <Card className="card-stats">
             <CardHeader>
-                <CardTitle tag="h5">Add Order</CardTitle>
+                <CardTitle tag="h5"> إضافة عميل جديد</CardTitle>
               </CardHeader>
               <CardBody>
                 <Row>
                   <Col md="4" xs="5">
                   <FormGroup>
-                        <label>Phone Number</label>
+                        <label> رقم التليفون</label>
                         <Input
                           type="text"
                         />
@@ -261,7 +261,7 @@ function Dashboard() {
                   </Col>
                   <Col md="4" xs="7">
                   <FormGroup>
-                        <label>Name</label>
+                        <label>الإسم</label>
                         <Input
                           type="text"
                         />
@@ -269,7 +269,7 @@ function Dashboard() {
                   </Col>
                   <Col md="4" xs="5">
                   <FormGroup>
-                        <label>Device</label>
+                        <label>الجهاز</label>
                         <Input
                           type="text"
                         />
@@ -279,17 +279,17 @@ function Dashboard() {
                 <Row>
                 <UncontrolledDropdown>
         <DropdownToggle caret>
-          Status
+          الحالة
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Normal</DropdownItem>
+          <DropdownItem>عادي</DropdownItem>
           <DropdownItem>VIP</DropdownItem>
           <DropdownItem>Blacklist</DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
                   <Col md="4" xs="7">
                   <FormGroup>
-                        <label>Deadline</label>
+                        <label>موعد التسليم</label>
                   <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                       </FormGroup>
                   </Col>
@@ -297,7 +297,7 @@ function Dashboard() {
                 <Row>
                 <Col md="12" xs="7">
                   <FormGroup>
-                        <label>Details</label>
+                        <label>ملاحظات إضافية...</label>
                         <Input
                           type="textarea"
                         />
@@ -309,7 +309,7 @@ function Dashboard() {
                         color="primary"
                         type="submit"
                       >
-                        Submit
+                        إرسال
                       </Button>
                     </div>
                 </Row>

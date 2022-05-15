@@ -32,14 +32,6 @@ var routes = [
     layout: "/admin",
   },
 
-  
-  // {
-  //   path: "/user-page",
-  //   name: "ملفات الزبائن",
-  //   icon: "nc-icon nc-single-02",
-  //   component: UserPage,
-  //   layout: "/admin",
-  // },
   {
     path: "/Parts",
     name: "قطع الغيار",
