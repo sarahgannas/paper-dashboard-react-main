@@ -18,10 +18,10 @@
 */
 import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
-import TableList from "views/Tables.js";
 import UserPage from "views/User.js";
-import ClientTables from "views/clients";
-import OrderTables from "views/orders";
+import Parts from "views/Parts";
+import User from "views/Users";
+import Orders from "views/Orders";
 
 var routes = [
   {
@@ -33,32 +33,32 @@ var routes = [
   },
 
   
+  // {
+  //   path: "/user-page",
+  //   name: "ملفات الزبائن",
+  //   icon: "nc-icon nc-single-02",
+  //   component: UserPage,
+  //   layout: "/admin",
+  // },
   {
-    path: "/user-page",
-    name: "ملفات الزبائن",
-    icon: "nc-icon nc-single-02",
-    component: UserPage,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
+    path: "/Parts",
     name: "قطع الغيار",
     icon: "nc-icon nc-tile-56",
-    component: TableList,
+    component: Parts,
     layout: "/admin",
   },
   {
-    path: "/clients",
+    path: "/User",
     name: "العملاء",
     icon: "nc-icon nc-bank",
-    component: ClientTables,
+    component: User,
     layout: "/admin",
   },
   {
     path: "/Orders",
     name: "الطلبيات",
     icon: "nc-icon nc-bank",
-    component: OrderTables,
+    component: Orders,
     layout: "/admin",
   },
 

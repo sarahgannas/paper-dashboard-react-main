@@ -28,7 +28,7 @@ function Footer(props) {
       <Container fluid={props.fluid ? true : false}>
         <Row>
           <nav className="footer-nav">
-            <ul>
+            {/* <ul>
               <li>
                 <a href="https://www.creative-tim.com" target="_blank">
                   Creative sarah
@@ -44,7 +44,7 @@ function Footer(props) {
                   Licenses
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </nav>
           {/* <div className="credits ml-auto">
             <div className="copyright">

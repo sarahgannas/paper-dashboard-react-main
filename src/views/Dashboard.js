@@ -16,19 +16,29 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+import OrdersPendingTable from "components/Tables/OrdersPendingTable";
 import React from "react";
 // react plugin used to create charts
 import { Line, Pie } from "react-chartjs-2";
 // reactstrap components
 import {
+  Button,
   Card,
   CardHeader,
   CardBody,
   CardFooter,
   CardTitle,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  UncontrolledDropdown,
+  FormGroup,
+  Input,
   Row,
   Col,
 } from "reactstrap";
+import DatePicker from "react-datepicker";
 // core components
 import {
   dashboard24HoursPerformanceChart,
@@ -37,10 +47,15 @@ import {
 } from "variables/charts.js";
 
 function Dashboard() {
+  const [startDate, setStartDate] = React.useState(new Date());
   return (
     <>
       <div className="content">
+
+        {/* 4 tabs container */}
         <Row>
+
+          {/* Tab 1 */}
           <Col lg="3" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
@@ -67,6 +82,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
+          {/* Tab 2 */}
           <Col lg="3" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
@@ -93,6 +109,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
+          {/* Tab 3 */}
           <Col lg="3" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
@@ -119,6 +136,7 @@ function Dashboard() {
               </CardFooter>
             </Card>
           </Col>
+          {/* Tab 4 */}
           <Col lg="3" md="6" sm="6">
             <Card className="card-stats">
               <CardBody>
@@ -146,7 +164,170 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
+
+        {/* Check customer and add customer container */}
+        <Row style={{alignItems:"center", justifyContent:'center'}}>
+          {/* Check customer */}
+        <Col lg="5" md="6" sm="6">
+            <Card className="card-stats">
+            <CardHeader>
+                <CardTitle tag="h5">Check User</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                <Col md="6" xs="5">
+                  <FormGroup>
+                        <label>Client Number</label>
+                        <Input
+                          type="text"
+                        />
+                      </FormGroup>
+                      <Button
+                        className="btn-round"
+                        color="primary"
+                        type="submit"
+                      >
+                        Submit
+                      </Button>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md="4" xs="7">
+                  <FormGroup>
+                        <Input
+                          type="text"
+                          placeholder="Name"
+                          disabled
+                        />
+                      </FormGroup>
+                  </Col>
+                  <Col md="4" xs="5">
+                  <FormGroup>
+                        <Input
+                          type="text"
+                          placeholder="Device"
+                          disabled
+                        />
+                      </FormGroup>
+                  </Col>
+                  <Col md="4" xs="7">
+                  <FormGroup>
+                        <Input
+                          type="text"
+                          placeholder="Status"
+                          disabled
+                        />
+                      </FormGroup>
+                  </Col>
+                  <Col md="4" xs="7">
+                  <FormGroup>
+                        <label>Deadline</label>
+                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                      </FormGroup>
+                  </Col>
+                </Row>
+                <Row>
+                </Row>
+                <Row>
+                <Col md="12" xs="7">
+                  <FormGroup>
+                        <Input
+                          type="textarea"
+                          placeholder="Details..."
+                          disabled
+                        />
+                      </FormGroup>
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          </Col>
+
+          {/* Add customer */}
+        <Col lg="5" md="6" sm="6">
+            <Card className="card-stats">
+            <CardHeader>
+                <CardTitle tag="h5">Add Order</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                  <Col md="4" xs="5">
+                  <FormGroup>
+                        <label>Phone Number</label>
+                        <Input
+                          type="text"
+                        />
+                      </FormGroup>
+                  </Col>
+                  <Col md="4" xs="7">
+                  <FormGroup>
+                        <label>Name</label>
+                        <Input
+                          type="text"
+                        />
+                      </FormGroup>
+                  </Col>
+                  <Col md="4" xs="5">
+                  <FormGroup>
+                        <label>Device</label>
+                        <Input
+                          type="text"
+                        />
+                      </FormGroup>
+                  </Col>
+                </Row>
+                <Row>
+                <UncontrolledDropdown>
+        <DropdownToggle caret>
+          Status
+        </DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem>Normal</DropdownItem>
+          <DropdownItem>VIP</DropdownItem>
+          <DropdownItem>Blacklist</DropdownItem>
+        </DropdownMenu>
+      </UncontrolledDropdown>
+                  <Col md="4" xs="7">
+                  <FormGroup>
+                        <label>Deadline</label>
+                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                      </FormGroup>
+                  </Col>
+                </Row>
+                <Row>
+                <Col md="12" xs="7">
+                  <FormGroup>
+                        <label>Details</label>
+                        <Input
+                          type="textarea"
+                        />
+                      </FormGroup>
+                  </Col>
+                    <div className="update ml-auto mr-auto">
+                      <Button
+                        className="btn-round"
+                        color="primary"
+                        type="submit"
+                      >
+                        Submit
+                      </Button>
+                    </div>
+                </Row>
+              </CardBody>
+              {/* <CardFooter>
+                <hr />
+                <div className="stats">
+                  <i className="fas fa-sync-alt" /> Due Today
+                </div>
+              </CardFooter> */}
+            </Card>
+          </Col>
+          </Row>
         <Row>
+          <OrdersPendingTable />
+        </Row>
+        {/* Graph container */}
+        {/* <Row>
           <Col md="12">
             <Card>
               <CardHeader>
@@ -162,68 +343,10 @@ function Dashboard() {
                 />
               </CardBody>
               <CardFooter>
-                <hr />
-                <div className="stats">
-                  <i className="fa fa-history" /> Updated 3 minutes ago
-                </div>
               </CardFooter>
             </Card>
           </Col>
-        </Row>
-        <Row>
-          <Col md="4">
-            {/* <Card>
-              <CardHeader>
-                <CardTitle tag="h5">Email Statistics</CardTitle>
-                <p className="card-category">Last Campaign Performance</p>
-              </CardHeader>
-              <CardBody style={{ height: "266px" }}>
-                <Pie
-                  data={dashboardEmailStatisticsChart.data}
-                  options={dashboardEmailStatisticsChart.options}
-                />
-              </CardBody>
-              <CardFooter>
-                <div className="legend">
-                  <i className="fa fa-circle text-primary" /> Opened{" "}
-                  <i className="fa fa-circle text-warning" /> Read{" "}
-                  <i className="fa fa-circle text-danger" /> Deleted{" "}
-                  <i className="fa fa-circle text-gray" /> Unopened
-                </div>
-                <hr />
-                <div className="stats">
-                  <i className="fa fa-calendar" /> Number of emails sent
-                </div>
-              </CardFooter>
-            </Card> */}
-          </Col>
-          {/* <Col md="8">
-            <Card className="card-chart">
-              <CardHeader>
-                <CardTitle tag="h5">NASDAQ: AAPL</CardTitle>
-                <p className="card-category">Line Chart with Points</p>
-              </CardHeader>
-              <CardBody>
-                <Line
-                  data={dashboardNASDAQChart.data}
-                  options={dashboardNASDAQChart.options}
-                  width={400}
-                  height={100}
-                />
-              </CardBody>
-              <CardFooter>
-                <div className="chart-legend">
-                  <i className="fa fa-circle text-info" /> Tesla Model S{" "}
-                  <i className="fa fa-circle text-warning" /> BMW 5 Series
-                </div>
-                <hr />
-                <div className="card-stats">
-                  <i className="fa fa-check" /> Data information certified
-                </div>
-              </CardFooter>
-            </Card>
-          </Col> */}
-        </Row>
+        </Row> */}
       </div>
     </>
   );

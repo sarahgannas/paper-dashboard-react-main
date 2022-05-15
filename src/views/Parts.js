@@ -1,13 +1,13 @@
 import React from "react";
-import {  Row, Col } from "reactstrap";
-import OrdersTable from "components/Tables/OrdersTable";
+import { Row, Col } from "reactstrap";
+import PartsTable from "components/Tables/PartsTable";
 
-export default function Orders() {
+export default function Parts() {
   return (
       <div className="content">
         <Row>
           <Col md="12">
-            <OrdersTable />
+            <PartsTable />
           </Col>
         </Row>
       </div>
