@@ -87,49 +87,49 @@ const headCells = [
     id: 'name',
     numeric: false,
     disablePadding: true,
-    label: 'Name',
+    label: 'الإسم',
   },
   {
     id: 'price',
     numeric: false,
     disablePadding: true,
-    label: 'Price',
+    label: 'السعر',
   },
   {
     id: 'brand',
     numeric: false,
     disablePadding: true,
-    label: 'Brand',
+    label: 'الشركة',
   },
   {
     id: 'category',
     numeric: true,
     disablePadding: false,
-    label: 'Category',
+    label: 'الفئة',
   },
   {
     id: 'quantity',
     numeric: true,
     disablePadding: false,
-    label: 'Quantity',
+    label: 'العدد',
   },
   {
     id: 'quality',
     numeric: true,
     disablePadding: false,
-    label: 'Quality',
+    label: 'لجودة',
   },
   {
     id: 'insurancetime',
     numeric: true,
     disablePadding: false,
-    label: 'Insurance time',
+    label: ' مدة التأمين',
   },
   {
     id: 'installationtime',
     numeric: true,
     disablePadding: false,
-    label: 'Installation Time',
+    label: ' مدة التركيب',
   },
 ];
 
@@ -219,7 +219,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Parts
+          قطع الغيار
         </Typography>
       )}
 

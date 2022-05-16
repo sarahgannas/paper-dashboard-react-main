@@ -84,25 +84,25 @@ const headCells = [
     id: 'name',
     numeric: false,
     disablePadding: true,
-    label: 'Name',
+    label: 'الإسم',
   },
   {
     id: 'phonenumber',
     numeric: true,
     disablePadding: false,
-    label: 'Phone Number',
+    label: ' رقم التليفون',
   },
   {
     id: 'history',
     numeric: true,
     disablePadding: false,
-    label: 'History',
+    label: 'السجل',
   },
   {
     id: 'status',
     numeric: true,
     disablePadding: false,
-    label: 'Status',
+    label: 'التصنيف',
   },
   // {
   //   id: 'carbs',
@@ -204,7 +204,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Clients
+          العملاء
         </Typography>
       )}
 
@@ -355,7 +355,7 @@ export default function UsersTable() {
                         color="primary"
                         type="submit"
                       >
-                        View
+                        عرض
                       </Button>                      </TableCell>
                       <TableCell align='right'>
                         <Select>

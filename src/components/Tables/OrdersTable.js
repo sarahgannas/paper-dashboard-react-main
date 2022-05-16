@@ -87,37 +87,37 @@ const headCells = [
     id: 'orderID',
     numeric: false,
     disablePadding: true,
-    label: 'Order ID',
+    label: ' رقم الطلبية',
   },
   {
     id: 'phonenumber',
     numeric: false,
     disablePadding: true,
-    label: 'Phone Number',
+    label: 'رقم التليفون ',
   },
   {
     id: 'servicetype',
     numeric: true,
     disablePadding: false,
-    label: 'Service Type',
+    label: ' نوع الخدمة',
   },
   {
     id: 'status',
     numeric: true,
     disablePadding: false,
-    label: 'Status',
+    label: 'الحالة',
   },
   {
     id: 'deadline',
     numeric: true,
     disablePadding: false,
-    label: 'Deadline',
+    label: 'موعد التسليم',
   },
   {
     id: 'details',
     numeric: true,
     disablePadding: false,
-    label: 'Details',
+    label: 'ملاحظات إضافية',
   },
   // {
   //   id: 'carbs',
@@ -218,7 +218,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Orders
+          الطلبيات
         </Typography>
       )}
 

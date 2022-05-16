@@ -169,9 +169,9 @@ function Dashboard() {
         <Row style={{alignItems:"center", justifyContent:'center'}}>
           {/* Check customer */}
         <Col lg="5" md="6" sm="6">
-            <Card className="card-stats">
+            <Card className="card-stats" >
             <CardHeader>
-                <CardTitle tag="h5">التحقق من العميل</CardTitle>
+                <CardTitle tag="h5"   >التحقق من العميل</CardTitle>
               </CardHeader>
               <CardBody>
                 <Row>
@@ -279,7 +279,7 @@ function Dashboard() {
                 <Row>
                 <UncontrolledDropdown>
         <DropdownToggle caret>
-          الحالة
+            الحالة
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem>عادي</DropdownItem>
